@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: keycloak-swagger
+#  profiles:
+#    include: microservice
+server:  
+  undertow:
+    worker-threads: 10
+  port: ${PORT:2222}
+keycloak:
+  auth-server-url: http://sso.karumien.com/auth
+  resource: keycloak-swagger-ui
+  credentials: 
+    secret: changeitnow
+  realm: master
